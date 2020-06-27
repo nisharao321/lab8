@@ -13,12 +13,12 @@
        }
 
        var ca;
-       var questions = ["Pitot Satic Tube contain________concentric tube.",
+       var questions = ["Air flow of a fan does not depend on_________",
        "Pitot static pressure is directly used for"
        ];
 
        var options2 = [
-       ["Two", "Three", "Four", "None of these"], //Two
+       ["Rotational speed of fan","Impeller diameter","Air density","Fan drift pressure"], //Two
        ["Average air velocity across crossectional area", "Air Velocity at a point", "Pressure at a point", "Average position"], //Meter of air
        ];
 
@@ -672,7 +672,7 @@ document.getElementById('nextButton').style.visibility = "visible";
                            document.getElementById('a11').style.visibility="hidden";
                            document.getElementById('a12').style.visibility="hidden";
                            document.getElementById('a15').style.visibility="hidden";
-                           validateAnswer(0, 0, "150px", "150px");
+                           validateAnswer(0, 2, "150px", "150px");
                          },800);
                        },800);
                      },800);
