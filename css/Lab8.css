@@ -308,11 +308,11 @@ input[type=number] {
 }
 @keyframes movehand22 {
 	0% {left: 208px; top: 60px;}
-	100% {left:213px; top:134px; }
+	100% {left:212px; top:134px; }
 }
 @-webkit-keyframes movehand22 {
 	0% {left: 208px; top: 60px;}
-	100% {left:213px; top:134px; }
+	100% {left:212px; top:134px; }
 }
 @keyframes movep1 {
 	0%{transform: rotate(-30deg);}
