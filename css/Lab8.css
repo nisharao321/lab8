@@ -56,6 +56,15 @@ width:745px;
 
 }
 
+.simsubscreenn
+{
+position:absolute;
+left: 50px;
+height:530px;
+width:745px;
+
+}
+
 .incanvas
 {
 margin:5px 0 0 5px;
@@ -197,14 +206,40 @@ margin-top: -30px;
     .tooltip:hover .tooltiptext {
       visibility: visible;
     }
-		
+		.tableShow {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  font-family: verdana;
+  font-size:14px;
+}
+
+.tableShow .tableShowResult {
+  font-family: verdana;
+  font-size:14px;
+  visibility: hidden;
+  background-color: white;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+  /* top:150px; */
+
+}
+
+.tableShow:hover .tableShowResult {
+  visibility: visible;
+}
     
-    canvas
+   /* canvas
     {
       border: 1px solid black;
       margin-left:30px;
       margin-top: 20px;
-    }
+    }*/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
