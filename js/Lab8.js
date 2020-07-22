@@ -121,6 +121,16 @@
        [0.158,0.020,8.867,0.417,9.598],
        [0.12,0.011,8.659,0.417,8.554]];
 
+       var data11=[[45],
+       [35],
+       [30],
+       [27],
+       [23.5],
+       [19.5],
+       [17],
+       [15.8],
+       [12]];
+
        var data4_1=[[2.467,0.392],
        [3.176,0.305],
        [3.635,0.257],
@@ -408,6 +418,7 @@
          highlight();
          p=p-2;
         console.log(p);
+        document.getElementById('s1').innerHTML=data11[p][0];
          calc1( 'button','output','output','button','output','button1','button','wrong','wrong','right','button1','h1','h1','output','wrong','right','right','h1','h1','button',0);
 
          calc1( 'button1','output1','output1','button1','output1','button2','button1','wrong1','wrong1','right1','button2','h2','h2','output1','wrong1','right1','right1','h2','h2','button1',1);
@@ -438,57 +449,59 @@
          document.getElementById('right2-2').style.visibility="hidden";
          document.getElementById('h2-1').style.visibility="hidden";
          document.getElementById('h2-2').style.visibility="hidden";
-        var graphDiv = document.getElementById('graph-container');
+        // var graphDiv = document.getElementById('graph-container');
     
     //Set values for x-axis and y-axis here
-    var data = [
-      {
-        x:[0.257,0.133,0.051,0.044,0.028,0.007],  //Change these values
-        y:[2.295,3.338,4.695,5.007,5.425,5.842],  //Make sure both arrays have same number of values
-        type:'scatter'
-      }
-    ]
+    // var data = [
+    //   {
+    //     x:[0.257,0.133,0.051,0.044,0.028,0.007],  //Change these values
+    //     y:[2.295,3.338,4.695,5.007,5.425,5.842],  //Make sure both arrays have same number of values
+    //     type:'scatter'
+    //   }
+    // ]
     
     //Add labels for graph and axes
-    var layout = {
-      title:'Total Pressure Vs Volume Flow', //Change this
-      xaxis:{
-       // title:'Volume  Flow ', //Change this
-      showline:true,
+    // var layout = {
+    //   title:'Total Pressure Vs Volume Flow', //Change this
+    //   xaxis:{
+    //    // title:'Volume  Flow ', //Change this
+    //   showline:true,
 
       // line:{
       //  width:1
 
       // }
 
-      },
-      yaxis:{
-        title:'Total  Pressure (m/s)', //Change this
-      }
-    };
+    //   },
+    //   yaxis:{
+    //     title:'Total  Pressure (m/s)', //Change this
+    //   }
+    // };
     
     //Copy paste this as it is and change only filename
-    var config = {
-      modeBarButtonsToRemove:['zoom2d','pan','lasso2d','pan2d','sendDataToCloud','hoverClosestCartesian','autoScale2d','select2d','zoomIn2d','zoomOut2d','resetScale2d','toggleSpikelines','hoverCompareCartesian'],
-      displaylogo:false,
-      displayModeBar:true,
-            showline:true,
+    // var config = {
+    //   modeBarButtonsToRemove:['zoom2d','pan','lasso2d','pan2d','sendDataToCloud','hoverClosestCartesian','autoScale2d','select2d','zoomIn2d','zoomOut2d','resetScale2d','toggleSpikelines','hoverCompareCartesian'],
+    //   displaylogo:false,
+    //   displayModeBar:true,
+    //         showline:true,
 
-      toImageButtonOptions:{
-        format:'jpeg',
-        filename:'Graph Name',  //Change this
-      }
-    }
+    //   toImageButtonOptions:{
+    //     format:'jpeg',
+    //     filename:'Graph Name',  //Change this
+    //   }
+    // }
     
-    //Calling this function will plot the graph in which ever div is assigned to graphDiv
-    Plotly.newPlot( graphDiv , data , layout , config );  
-         document.getElementById('nextButton').style.visibility="visible";
+    // //Calling this function will plot the graph in which ever div is assigned to graphDiv
+    // Plotly.newPlot( graphDiv , data , layout , config );  
+    //      document.getElementById('nextButton').style.visibility="visible";
        }
 
 
        if (simsubscreennum===7)
        {
-        
+         document.getElementById('chartContainer').style.visibility = "hidden";
+        document.getElementById('download-graph').style.visibility = "hidden";
+
          myInt = setInterval(function(){ animatearrow(); }, 500);
          animateArrowATPosition(60,85,20,270);
          document.getElementById('b3').onclick=function() { stepp1(); };
@@ -553,6 +566,8 @@
          fillTable3(0);
          highlight2();
          p=p-2;
+         document.getElementById('s2').innerHTML=data11[p][0];
+
          calc3( 'button-11','output-11','output-11','button-11','output-11','button1-11','button-11','wrong-11','wrong-11','right-11','button1-11','h1-2','h1-2','output-11','wrong-11','right-11','right-11','h1-2','h1-2','button-11',0);
 
          calc3( 'button1-11','output1-11','output1-11','button1-11','output1-11','button2-11','button1-11','wrong1-11','wrong1-11','right1-11','button2-11','h2-21','h2-21','output1-11','wrong1-11','right1-11','right1-11','h2-21','h2-21','button1-11',1);
@@ -576,72 +591,161 @@
 
        if (simsubscreennum===11)
        {
+
          document.getElementById('right3-1').style.visibility="hidden";
          document.getElementById('right3-2').style.visibility="hidden";
          document.getElementById('h3-1').style.visibility="hidden";
          document.getElementById('h3-2').style.visibility="hidden";
-         var graphDiv = document.getElementById('graph-container1');
-    
-    //Set values for x-axis and y-axis here
-    var data = [
-      {
-        x:[0.392,0.305,0.257,0.199,0.166,0.118,0.091,0.078,0.043],  //Change these values
-        y:[2.608,1.565,1.252,1.252,0.835,0.522,0.522,0.417,0.417],  //Make sure both arrays have same number of values
-        type:'scatter'
-      }
-    ]
-    
-    //Add labels for graph and axes
-   var layout = {
-      title:'Total Pressure Vs Volume Flow', //Change this
-      xaxis:{
-        //title:'Volume  Flow', //Change this
-      showline:true,
-
-      // line:{
-      //  width:1
-
-      // }
-
-      },
-      yaxis:{
-        title:'Total  Pressure (m/s)',
-              showline:true,
- //Change this
-      }
-    };
-    
-    
-    //Copy paste this as it is and change only filename
-    var config = {
-      modeBarButtonsToRemove:['zoom2d','pan','lasso2d','pan2d','sendDataToCloud','hoverClosestCartesian','autoScale2d','select2d','zoomIn2d','zoomOut2d','resetScale2d','toggleSpikelines','hoverCompareCartesian'],
-      displaylogo:false,
-      displayModeBar:true,
-            showline:true,
-
-      toImageButtonOptions:{
-        format:'jpeg',
-        filename:'Graph Name',  //Change this
-      }
-    }
-    
-    //Calling this function will plot the graph in which ever div is assigned to graphDiv
-    Plotly.newPlot( graphDiv , data , layout , config );  
-         document.getElementById('nextButton').style.visibility="visible";
 
        }
 
 
-       if (simsubscreennum===11)
+       if (simsubscreennum===12)
        {
-         
+          document.getElementById('chartContainer1').style.visibility = "hidden";
+        document.getElementById('download-graph1').style.visibility = "hidden";
+         $("#cbcalculation").ejChart(
+      { 
+        primaryXAxis:
+        {
+          title: { text: 'Volume Flow in m3/s' ,
+              font : { fontWeight : "Bold" ,
+                  fontFamily: "Verdana",
+                  size: '14px' }},
+          labelFormat:"{value}",      
+          // range: { min: 1000, max: 4000, interval: 500},              
+          range: {min: 0,max: 0.30,interval: 0.05 } ,
+          border: { 
+                 color: "blue",
+                 width: 2,
+                 opacity: 0.5 ,
+                 cornerRadius : 4
+               }, 
+
+          //Customizing Chart title font 
+          font:{ 
+               opacity: 1,
+               fontFamily: "Verdana",
+               color: "black",
+               size: '14px' 
+             }             
+           
+        },   
+         primaryYAxis:
+        {
+          title: { text: 'Total Pressure in m/s' ,
+              font : { fontWeight : "Bold" ,
+                  fontFamily: "Verdana",
+                  size: '14px' }},
+          labelFormat:"{value}",
+          // range: { min: 100, max: 400, interval: 50 },                       
+          range: { min: 0, max: 6, interval: 1}  ,
+          font:{ 
+               opacity: 1,
+               fontFamily: "Verdana",
+               color: "black",
+               size: '14px' 
+             }  
+          
+        },
+
+        series: 
+        [ 
+          {
+            points: [
+                                {x: 0.007,y: 5.842},
+                                {x: 0.028,y: 5.425},
+                                {x: 0.044,y: 5.007},
+                                {x: 0.133,y: 3.338},
+                                {x: 0.257,y: 2.295}
+                               
+                            ],
+            name:'Total Pressure v/s Volume Flow for 300 rpm',
+            type: 'spline',
+            fill:"#0066FF",
+            border :{width:5},
+            tooltip:{visible:true},
+            marker:{
+              shape: 'circle',
+              size:
+              {
+                height: 5, width: 5
+              },
+              visible: true
+            },          
+            
+          },
+          {       // Add second series
+         points: [
+                                {x: 0,y: 0},
+                                {x: 0.043,y: 0.417},
+                                {x: 0.078,y: 0.417},
+                                {x: 0.118,y: 0.522},
+                                {x: 0.166,y: 0.835},
+                                {x: 0.257,y: 1.252},
+                                // {x: 0.305,y: 1.565},
+                                // {x: 0.392,y: 2.608},
+
+                               
+                            ], 
+          name:'Total Pressure v/s Volume Flow for 400 rpm',
+           type: 'line',
+           fill:"#a04000",
+            border :{width:5},
+            tooltip:{visible:true},
+            marker:{
+              shape: 'circle',
+              size:
+              {
+                height: 5, width: 5
+              },
+              visible: true
+            },          
+           // ...
+          },
+          // {      // Add third series
+          // points: [{x :  5 ,y : 0 },
+          //     {x : 5 ,y : 6.35 },
+          //     {x : 0,y : 6.35 },
+          //   ],     
+          // name:'Penetration at 5mm',
+          // dashArray:'5,5',          
+          // type: 'line',
+          //  fill:"#0e6655 ",
+          //   border :{width:5},
+          //   tooltip:{visible:true},
+          //   marker:{
+          //     shape: 'circle',
+          //     size:
+          //     {
+          //       height: 5, width: 5
+          //     },
+          //     visible: true
+          //   },  
+          // // ...
+          // },
+        
+        ],
+        commonSeriesOptions : {
+          enableAnimation :true,
+          animationDuration : 800 
+        },
+        load:"loadTheme",
+        isResponsive: true,
+        title :{text: 'Total Pressure v/s Volume Flow'},
+        legend:{visible:true,
+            font : { fontWeight : "Bold" ,
+            fontFamily: "Verdana",
+            size: '13px' }}
+      });
+    }
+  }
          // setTimeout(function()
          // {
          //   document.getElementById('k1').innerHTML = "1.The velocity of air at 300 rpm is="++"m/s.";
          //   document.getElementById('k2').innerHTML = "2.The velocity of air at 400 rpm is="++"m/s.";
          // },500);
-       }
-     }
+      
 
      function step1()
      {
@@ -652,7 +756,6 @@
        setTimeout(function()
        {
          document.getElementById('a03').style.visibility = "visible";
-
          myInt = setInterval(function(){ animatearrow(); }, 500);
          animateArrowATPosition(198,280,20,720);
        },1000);
@@ -1537,3 +1640,230 @@
                  }
                };
              }
+
+
+function graph() {
+                document.getElementById('chartContainer').style.visibility = "visible";
+                document.getElementById('download-graph').style.visibility = "visible";
+
+                $("#chartContainer").ejChart({
+                    primaryXAxis: {
+                        title: {
+                            text: 'Volume Flow in m3/s',
+                            font: {
+                                fontWeight: "Bold",
+                                fontFamily: "Verdana",
+                                size: '14px'
+                            }
+                        },
+                        labelFormat: "{value}",
+                        // range: { min: 1000, max: 4000, interval: 500},              
+                        range: {
+                            min: 0,max: 0.30,interval: 0.05
+                        },
+                        border: {
+                            color: "blue",width: 2,opacity: 0.5,cornerRadius: 4
+                        },
+
+                        //Customizing Chart title font 
+                        font: {
+                            opacity: 1,fontFamily: "Verdana",color: "black",size: '14px'
+                        }
+                    },
+                    primaryYAxis: {
+                        title: {
+                            text: 'Total Pressure in m/s',
+                            font: {
+                                fontWeight: "Bold",fontFamily: "Verdana",size: '14px'
+                            }
+                        },
+                        labelFormat: "{value}",
+                        // range: { min: 100, max: 400, interval: 50 },                       
+                        range: {
+                            min: 0,max: 6,interval: 1
+                        },
+                        font: {
+                            opacity: 1,fontFamily: "Verdana",color: "black",size: '14px'
+                        }
+
+                    },
+                    series: [{
+                            points: [
+                                {x: 0.007,y: 5.842},
+                                {x: 0.028,y: 5.425},
+                                {x: 0.044,y: 5.007},
+                                {x: 0.133,y: 3.338},
+                                {x: 0.257,y: 2.295}
+                               
+                            ],
+                            name: 'Total Pressure v/s Volume Flow',
+                            type: 'line',
+                            fill: "#0066FF",
+                            border: {
+                                width: 5
+                            },
+                            tooltip: {
+                                visible: true
+                            },
+                            marker: {
+                                shape: 'circle',
+                                size: {
+                                    height: 5,
+                                    width: 5
+                                },
+                                visible: true
+                            },
+
+                        },
+
+                    ],
+                    commonSeriesOptions: {
+                        enableAnimation: true,
+                        animationDuration: 800
+                    },
+                    load: "loadTheme",
+                    isResponsive: true,
+                    legend: {
+                        visible: true,
+                        font: {
+                            fontWeight: "Bold",
+                            fontFamily: "Verdana",
+                            size: '12px'
+                        }
+                    },
+                     enableCanvasRendering: true,
+                    exportSettings: { type: "jpg", mode: "client"}
+                  
+                });
+                
+                setTimeout(function() {
+                    document.getElementById("nextButton").style.visibility = "visible";
+                }, 1000);
+
+                //Add download function to the anchor element.
+                document.getElementById('download-graph').onclick = function download() {
+                    var chart = $("#chartContainer").ejChart("export");
+                    if(window.navigator.msSaveOrOpenBlob)
+                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph.jpg");
+                    else{
+                      var chartData = chart.toDataURL();
+                      this.download = "Graph.jpg";
+                      this.href = chartData;
+                    }
+                }
+            }
+
+function graph1() {
+                document.getElementById('chartContainer1').style.visibility = "visible";
+                document.getElementById('download-graph1').style.visibility = "visible";
+
+                $("#chartContainer1").ejChart({
+                    primaryXAxis: {
+                        title: {
+                            text: 'Volume Flow in m3/s',
+                            font: {
+                                fontWeight: "Bold",
+                                fontFamily: "Verdana",
+                                size: '14px'
+                            }
+                        },
+                        labelFormat: "{value}",
+                        // range: { min: 1000, max: 4000, interval: 500},              
+                        range: {
+                            min: 0,max: 0.30,interval: 0.05
+                        },
+                        border: {
+                            color: "blue",width: 2,opacity: 0.5,cornerRadius: 4
+                        },
+
+                        //Customizing Chart title font 
+                        font: {
+                            opacity: 1,fontFamily: "Verdana",color: "black",size: '14px'
+                        }
+                    },
+                    primaryYAxis: {
+                        title: {
+                            text: 'Total Pressure in m/s',
+                            font: {
+                                fontWeight: "Bold",fontFamily: "Verdana",size: '14px'
+                            }
+                        },
+                        labelFormat: "{value}",
+                        // range: { min: 100, max: 400, interval: 50 },                       
+                        range: {
+                            min: 0,max: 6,interval: 1
+                        },
+                        font: {
+                            opacity: 1,fontFamily: "Verdana",color: "black",size: '14px'
+                        }
+
+                    },
+                    series: [{
+                            points: [
+                                {x: 0,y: 0},
+                                {x: 0.043,y: 0.417},
+                                {x: 0.078,y: 0.417},
+                                {x: 0.118,y: 0.522},
+                                {x: 0.166,y: 0.835},
+                                {x: 0.257,y: 1.252},
+                                // {x: 0.305,y: 1.565},
+                                // {x: 0.392,y: 2.608},
+
+                               
+                            ],
+                            name: 'Total Pressure v/s Volume Flow',
+                            type: 'line',
+                            fill: "#a04000",
+                            border: {
+                                width: 5
+                            },
+                            tooltip: {
+                                visible: true
+                            },
+                            marker: {
+                                shape: 'circle',
+                                size: {
+                                    height: 5,
+                                    width: 5
+                                },
+                                visible: true
+                            },
+
+                        },
+
+                    ],
+                    commonSeriesOptions: {
+                        enableAnimation: true,
+                        animationDuration: 800
+                    },
+                    load: "loadTheme",
+                    isResponsive: true,
+                    legend: {
+                        visible: true,
+                        font: {
+                            fontWeight: "Bold",
+                            fontFamily: "Verdana",
+                            size: '12px'
+                        }
+                    },
+                     enableCanvasRendering: true,
+                    exportSettings: { type: "jpg", mode: "client"}
+                  
+                });
+                
+                setTimeout(function() {
+                    document.getElementById("nextButton").style.visibility = "visible";
+                }, 1000);
+
+                //Add download function to the anchor element.
+                document.getElementById('download-graph1').onclick = function download() {
+                    var chart = $("#chartContainer1").ejChart("export");
+                    if(window.navigator.msSaveOrOpenBlob)
+                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph.jpg");
+                    else{
+                      var chartData = chart.toDataURL();
+                      this.download = "Graph.jpg";
+                      this.href = chartData;
+                    }
+                }
+            }
