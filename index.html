@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>SOLVE</title>
+<title>SOLVE</title>
   <link rel="stylesheet" href="css/Lab8.css" />
-  <script type="text/javascript" src= "js/Lab8.js"></script>
   <script type="text/javascript" src= "js/jquerymin.js"></script>
-  <script type="text/javascript" src= "js/plotly-latest.min.js"></script>
+ <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
+ <script type="text/javascript" src= "js/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+ --> <script type="text/javascript" src= "js/ej.web.all.min.js"></script>
+   <script type="text/javascript" src= "js/Lab8.js"></script>
 
+<!--   <script type="text/javascript" src="js/canvasjs.min.js"></script>
+ -->
   <script>
     var simsubscreennum=0;
     var temp=0;
@@ -178,10 +183,10 @@
 
         </div>
 
-        <div class="simsubscreen" id="canvas4"  style="visibility:hidden;">
-           <strong class="incanvas" id="ob"><h3>Observations: </h3></strong>
+        <div class="simsubscreenn" id="canvas4"  style="visibility:hidden;">
+           <strong ><h3>Observations: </h3></strong>
           <span class="tooltip" style="border-bottom:1px dotted ; color:red;"> Variables in calculation
-            <span  class="tooltiptext" style="text-align:justify;left:160px;top:70px;width:400px;">
+            <span  class="tooltiptext" style="text-align:justify;left:160px;top:55px;width:400px;">
                &theta; :Angle of inclination of the manometer tube = 7.74&#0176;<br><br>
                &#961; :Specific gravity of the manometer liquid = 0.789<br><br>
                g :Acceleration due to gravity = 9.8 ms<sup>-2</sup><br><br>
@@ -189,7 +194,8 @@
                L<sub>t1</sub> :Length of total head at point 1<br><br>
                L<sub>v1</sub> :Length of velocity head at point 1
           </span></span>
-       </br></br>
+       </br>
+       <p>Static, Total, Velocity Head pressure is calculated for cardboard of diameter<u> <span id='s1'></span></u> cm </p>
           <table id="table2" border=1 style="text-align:center; font-size:14px; width:700px;">
             <tr>
               <td colspan="1" style="padding:10px;" ></td>
@@ -324,21 +330,18 @@
     </br></br>
 </div>
 
-<div class="simsubscreen" id="canvas6" style="visibility:hidden">
-  <strong id="titlestep" class="incanvas">STEP </strong>
-  <span class="circlebg" id="stepnumber">&nbsp;5&nbsp;</span>
-  <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Draw the graph of Total Pressure Vs Volume Flow.</p>
-  
-  <div style=" border-radius: 5px; border:1px solid white; padding: 20px; width: max-content;">
-
-    <!--Copy paste this empty div ('graph-container') to your page-->
-    <div id="graph-container" style="width:700px;height:430px;"></div>
-   <center style="position: absolute;top:430px;left:320px;">Volume Flow (m<sup>3</sup>/s)</center>
-
-    
-    <center>Click on the camera icon on the top right to download the graph as image</center>
-
-  </div>
+<div id="canvas6" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext">&nbsp;Plot graph of Axial Load Vs Penetration.</p>
+<div>
+       
+        <p id="g" style="position:absolute;background-color: #EEEEEE; left:150px; top:25px;cursor:pointer;border: 2px solid;padding: 5px;border-radius: 5px" onclick = "graph();">Total Pressure v/s Volume Flow graph for 300 rpm</p>
+        <div id="chartContainer" style="position:absolute;height: 440px; width: 600px; top:50px;margin-left:50px; margin-right:100px; margin-top:30px;border:2px solid;visibility:hidden"></div>
+      </div>
+       <a id='download-graph'style='visibility: hidden;'><button style='position: absolute;  left: 540px; top:40px;font-family:verdana; font-size:18px;'>Download Graph</button></a>
+<!-- <div id="chartContainer" style="height: 275px; width: 100%;"></div>
+ -->  
 </div>
 
 <div class="simsubscreen" id="canvas7" style="visibility:hidden">
@@ -454,10 +457,10 @@
         <p id="par33-2" style="position:absolute;top:490px;left:150px;font-family:verdana; font-size:14px;"></p>
 </div>
 
-<div class="simsubscreen" id="canvas9"  style="visibility:hidden;">
-  <strong class="incanvas" id="ob"><h3>Observations: </h3></strong>
+<div class="simsubscreenn" id="canvas9"  style="visibility:hidden;">
+  <strong id="ob"><h3>Observations: </h3></strong>
   <span class="tooltip" style="border-bottom:1px dotted ; color:red;"> Variables in calculation
-            <span  class="tooltiptext" style="text-align:justify;left:160px;top:70px;width:400px;">
+            <span  class="tooltiptext" style="text-align:justify;left:160px;top:55px;width:400px;">
                &theta; :Angle of inclination of the manometer tube = 7.74&#0176;<br><br>
                &#961; :Specific gravity of the manometer liquid = 0.789<br><br>
                g :Acceleration due to gravity = 9.8 ms<sup>-2</sup><br><br>
@@ -466,7 +469,9 @@
                L<sub>t1</sub> :Length of Total Head at point 1<br><br>
                L<sub>v1</sub> :Length of Velocity Head at point 1
           </span></span>
-      </br></br>
+      </br>
+       <p>Static, Total, Velocity Head pressure is calculated for cardboard of diameter<u> <span id='s2'></span></u> cm </p>
+
   <table id="table4" border=1 style="text-align:center; font-size:14px; width:700px;">
     <tr>
       <td colspan="1" style="padding:10px;" ></td>
@@ -601,14 +606,10 @@
   <strong id="titlestep" class="incanvas">STEP </strong>
   <span class="circlebg" id="stepnumber">&nbsp;7&nbsp;</span>
   <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Draw the graph of Total Pressure Vs Volume Flow.</p>
-    <div style=" border-radius: 5px; border:1px solid white; padding: 20px; width: max-content;">
-
-    <!--Copy paste this empty div ('graph-container') to your page-->
-    <div id="graph-container1" style="width:700px;height:420px;top:30px;"></div>
-       <center style="position: absolute;top:430px;left:320px;">Volume Flow (m<sup>3</sup>/s)</center>
-    <center>Click on the camera icon on the top right to download the graph as image</center>
-
-  </div>
+     <p id="g1" style="position:absolute;background-color: #EEEEEE; left:150px; top:25px;cursor:pointer;border: 2px solid;padding: 5px;border-radius: 5px" onclick = "graph1();">Total Pressure v/s Volume Flow graph for 400 rpm</p>
+        <div id="chartContainer1" style="position:absolute;height: 440px; width: 600px; top:50px;margin-left:50px; margin-right:100px; margin-top:30px;border:2px solid;visibility:hidden"></div>
+      </div>
+       <a id='download-graph1'style='visibility: hidden;'><button style='position: absolute;  left: 600px; top:92px;font-family:verdana; font-size:18px;'>Download Graph</button></a>
 <!-- </div>
  -->
 </div>
@@ -618,6 +619,11 @@
   <strong class="incanvas" id="ob"><h3>
   Result: </h3></strong>
   <label id="k1" style="font-size:14px;font-family:verdana;" >The characteristics curve of backward bladed centrifugal fan are drawn at different speeds.</label></br></br>
+  <span class="tableShow" style="position:absolute;left:15px;top:100px;color:red">Refer Graph
+    <span class="tableShowResult" style="border:2px solid black;">
+    <div id="cbcalculation" style="height: 400px; width: 550px; border:2px solid;"></div>
+    </span>
+  </span>
   </div>
 
 <div id="questDiv" style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
