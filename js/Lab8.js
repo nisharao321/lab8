@@ -563,7 +563,7 @@
         },   
          primaryYAxis:
         {
-          title: { text: 'Total Pressure in m/s' ,
+          title: { text: 'Total Pressure in Pascal' ,
               font : { fontWeight : "Bold" ,
                   fontFamily: "Verdana",
                   size: '14px' }},
@@ -1570,7 +1570,7 @@
                     },
                     primaryYAxis: {
                         title: {
-                            text: 'Total Pressure in m/s',
+                            text: 'Total Pressure in Pascal',
                             font: {
                                 fontWeight: "Bold",fontFamily: "Verdana",size: '14px'
                             }
@@ -1681,7 +1681,7 @@
                     },
                     primaryYAxis: {
                         title: {
-                            text: 'Total Pressure in m/s',
+                            text: 'Total Pressure in Pascal',
                             font: {
                                 fontWeight: "Bold",fontFamily: "Verdana",size: '14px'
                             }
