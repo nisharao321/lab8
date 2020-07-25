@@ -14,21 +14,25 @@
 
        var ca;
        var questions = ["Air flow of a fan does not depend on_________",
-       "Pitot static pressure is directly used for"
+       "In efficiency characteristic curve of a fan, efficiency refer to_____________",
+       "Which of the following refer to fan characteristics curve"
        ];
 
        var options2 = [
-       ["Rotational speed of fan","Impeller diameter","Air density","Fan drift pressure"], //Two
-       ["Average air velocity across crossectional area", "Air Velocity at a point", "Pressure at a point", "Average position"], //Meter of air
+       ["Rotational speed of fan","Impeller diameter","Air density","Fan drift pressure"], //air density
+       ["Mechanical efficiency of fan", "Electrical efficiency of fan", "Overall efficiency of fan", "None of above"], //Electrical efficiency of fan
+       ["Pressure Vs Volume", "Power Vs Volume", "Efficiency Vs Volume", "All of above"], //All of above
+
        ];
 
        function validateAnswer(qn, ans, left, top) {
          $("#answer").empty();
          document.getElementById("a").innerHTML = "";
-         document.getElementById("questDiv").style = "position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:" + left + ";top:" + top + ";";
+         document.getElementById("questDiv").style = "position:absolute;text-align:justify; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:visible; left:" + left + ";top:" + top + ";";
          document.getElementById("q").innerHTML = questions[qn];
          if (qn === 0) document.getElementById('questDiv').style.width = "370px";
-         if (qn === 1) document.getElementById('questDiv').style.width = "370px";
+         if (qn === 1) document.getElementById('questDiv').style.width = "250px";
+         if (qn === 2) document.getElementById('questDiv').style.width = "250px";
 
          el = document.createElement("option");
          el.textContent = " ";
@@ -205,15 +209,10 @@
        {
          var tb2 = document.getElementById("table2");
          var row2 = tb2.insertRow();
-         //var cell2 = row2.insertCell();
-         //console.log(row2.insertCell());
-         //cell2.innerHTML = 1;
          for (i = 0; i <= data1[j1].length-1; i++)
          {
-          //if(i<=data1[j1].length)
            var cell2 = row2.insertCell();
            cell2.innerHTML = data1[j1][i];
-          //console.log(cell2);
          }
         if(j1<=7)
         {
@@ -234,8 +233,6 @@
        {
          var tb3 = document.getElementById("table3");
          var row3 = tb3.insertRow();
-        // var cell3 = row3.insertCell();
-         // cell3.innerHTML = 1;
          for (i = 0; i <= data2[j2].length-1; i++)
          {
            var cell3 = row3.insertCell();
@@ -261,8 +258,6 @@
        {
          var tb4 = document.getElementById("table4");
          var row4 = tb4.insertRow();
-        // var cell4 = row4.insertCell();
-         // cell4.innerHTML = 1;
          for (i = 0; i <= data3[j3].length-1; i++)
          {
            var cell4 = row4.insertCell();
@@ -281,14 +276,11 @@
          rows.style.backgroundColor = "#EFEDEF";
          }
 
-
        var j4=0;
        function fillTable4(repeat)
        {
          var tb5 = document.getElementById("table5");
          var row5 = tb5.insertRow();
-         //var cell5 = row5.insertCell();
-         // cell5.innerHTML = 1;
          for (i = 0; i <= data2[j4].length-1; i++)
          {
            var cell5 = row5.insertCell();
@@ -321,7 +313,6 @@
      }
      function magic()
      {
-
        if (simsubscreennum===1)
        {
          myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -332,7 +323,6 @@
        {
          document.getElementById('a03').style.visibility = "hidden";
          document.getElementById('a44').style.visibility = "hidden";
-
          document.getElementById('arrow2').style.visibility="hidden";
          document.getElementById('wind').style.visibility="hidden";
          document.getElementById('a2').style.visibility="hidden";
@@ -344,7 +334,6 @@
        }
        if (simsubscreennum===3)
        {
-
          document.getElementById('ca-1').style.visibility="hidden";
          document.getElementById('ca-2').style.visibility="hidden";
          document.getElementById('ca-3').style.visibility="hidden";
@@ -356,7 +345,6 @@
            document.getElementById('can1').style.visibility="visible";
            document.getElementById('can2').style.visibility="visible";
            document.getElementById('can3').style.visibility="visible";
-
            document.getElementById('m-1').style.visibility="visible";
            document.getElementById('m-2').style.visibility="visible";
            document.getElementById('m-5').style.visibility="visible";
@@ -372,7 +360,6 @@
            }
            setTimeout(function()
            {
-
             document.getElementById('aa').style.visibility="visible";
             document.getElementById("aa").src =data8[p][0];
             document.getElementById('Sample4').style.visibility="hidden";
@@ -412,9 +399,7 @@
          document.getElementById('a1-22').style.visibility="hidden";
          
          fillTable1(0);
-          console.log(p)
-         // p=p+2;
-         // console.log(p);
+         console.log(p)
          highlight();
          p=p-2;
         console.log(p);
@@ -424,18 +409,14 @@
          calc1( 'button1','output1','output1','button1','output1','button2','button1','wrong1','wrong1','right1','button2','h2','h2','output1','wrong1','right1','right1','h2','h2','button1',1);
 
          calc1( 'button2','output2','output2','button2','output2','nextButton','button2','wrong2','wrong2','right2','nextButton','h3','h3','output2','wrong2','right2','right2','h3','h3','button2',2);
-
        }
 
        if (simsubscreennum===5)
        {
         refresh('right','right1','right2');
          refresh1('h1','h2','h3');
-
         fillTable2(0);
-         // p=p-3;
         console.log(p);
-
          highlight1();
          p=p-1;
          calc2('button2-1','output2-1','output2-1','button2-1','output2-1','button2-2','button2-1','wrong2-1','wrong2-1','right2-1','button2-2','h2-1','h2-1','output2-1','wrong2-1','right2-1','right2-1','h2-1','h2-1','button2-1',0);
@@ -448,55 +429,8 @@
          document.getElementById('right2-1').style.visibility="hidden";
          document.getElementById('right2-2').style.visibility="hidden";
          document.getElementById('h2-1').style.visibility="hidden";
-         document.getElementById('h2-2').style.visibility="hidden";
-        // var graphDiv = document.getElementById('graph-container');
-    
-    //Set values for x-axis and y-axis here
-    // var data = [
-    //   {
-    //     x:[0.257,0.133,0.051,0.044,0.028,0.007],  //Change these values
-    //     y:[2.295,3.338,4.695,5.007,5.425,5.842],  //Make sure both arrays have same number of values
-    //     type:'scatter'
-    //   }
-    // ]
-    
-    //Add labels for graph and axes
-    // var layout = {
-    //   title:'Total Pressure Vs Volume Flow', //Change this
-    //   xaxis:{
-    //    // title:'Volume  Flow ', //Change this
-    //   showline:true,
-
-      // line:{
-      //  width:1
-
-      // }
-
-    //   },
-    //   yaxis:{
-    //     title:'Total  Pressure (m/s)', //Change this
-    //   }
-    // };
-    
-    //Copy paste this as it is and change only filename
-    // var config = {
-    //   modeBarButtonsToRemove:['zoom2d','pan','lasso2d','pan2d','sendDataToCloud','hoverClosestCartesian','autoScale2d','select2d','zoomIn2d','zoomOut2d','resetScale2d','toggleSpikelines','hoverCompareCartesian'],
-    //   displaylogo:false,
-    //   displayModeBar:true,
-    //         showline:true,
-
-    //   toImageButtonOptions:{
-    //     format:'jpeg',
-    //     filename:'Graph Name',  //Change this
-    //   }
-    // }
-    
-    // //Calling this function will plot the graph in which ever div is assigned to graphDiv
-    // Plotly.newPlot( graphDiv , data , layout , config );  
-    //      document.getElementById('nextButton').style.visibility="visible";
+         document.getElementById('h2-2').style.visibility="hidden";   
        }
-
-
        if (simsubscreennum===7)
        {
          document.getElementById('chartContainer').style.visibility = "hidden";
@@ -547,7 +481,6 @@
              document.getElementById('b1-21').onclick=function() { step33(); };
            },3000);
          },4000);
-         /* }; */
        }
        if (simsubscreennum===9)
        {
@@ -596,10 +529,7 @@
          document.getElementById('right3-2').style.visibility="hidden";
          document.getElementById('h3-1').style.visibility="hidden";
          document.getElementById('h3-2').style.visibility="hidden";
-
        }
-
-
        if (simsubscreennum===12)
        {
           document.getElementById('chartContainer1').style.visibility = "hidden";
@@ -657,8 +587,7 @@
                                 {x: 0.028,y: 5.425},
                                 {x: 0.044,y: 5.007},
                                 {x: 0.133,y: 3.338},
-                                {x: 0.257,y: 2.295}
-                               
+                                {x: 0.257,y: 2.295}    
                             ],
             name:'Total Pressure v/s Volume Flow for 300 rpm',
             type: 'spline',
@@ -683,10 +612,6 @@
                                 {x: 0.118,y: 0.522},
                                 {x: 0.166,y: 0.835},
                                 {x: 0.257,y: 1.252},
-                                // {x: 0.305,y: 1.565},
-                                // {x: 0.392,y: 2.608},
-
-                               
                             ], 
           name:'Total Pressure v/s Volume Flow for 400 rpm',
            type: 'line',
@@ -701,30 +626,7 @@
               },
               visible: true
             },          
-           // ...
           },
-          // {      // Add third series
-          // points: [{x :  5 ,y : 0 },
-          //     {x : 5 ,y : 6.35 },
-          //     {x : 0,y : 6.35 },
-          //   ],     
-          // name:'Penetration at 5mm',
-          // dashArray:'5,5',          
-          // type: 'line',
-          //  fill:"#0e6655 ",
-          //   border :{width:5},
-          //   tooltip:{visible:true},
-          //   marker:{
-          //     shape: 'circle',
-          //     size:
-          //     {
-          //       height: 5, width: 5
-          //     },
-          //     visible: true
-          //   },  
-          // // ...
-          // },
-        
         ],
         commonSeriesOptions : {
           enableAnimation :true,
@@ -740,13 +642,6 @@
       });
     }
   }
-         // setTimeout(function()
-         // {
-         //   document.getElementById('k1').innerHTML = "1.The velocity of air at 300 rpm is="++"m/s.";
-         //   document.getElementById('k2').innerHTML = "2.The velocity of air at 400 rpm is="++"m/s.";
-         // },500);
-      
-
      function step1()
      {
        myStopFunction();
@@ -1045,8 +940,10 @@
                                        document.getElementById('para22-1').innerHTML="Right Limb Reading="+data1[p][8]+" cm";
                                        document.getElementById('para33-1').innerHTML="Difference="+data1[p][9]+" cm";
                                        document.getElementById('Sample5').style.visibility="visible";
-
-                                       document.getElementById('nextButton').style.visibility="visible";
+                                       setTimeout(function()
+                                       {
+                                         validateAnswer(1,0, "530px", "90px");
+                                       },4000);
                                        },2000);
                                       }
                                      },2000);
@@ -1080,8 +977,6 @@
          },2000);
         },1000);
        }
-
-    
 
      function initiate() {
        var img=document.getElementById('a2');
@@ -1384,7 +1279,10 @@
                                        document.getElementById('par22-2').innerHTML="Right Limb Reading="+data3[p][8]+" cm";
                                        document.getElementById('par33-2').innerHTML="Difference="+data3[p][9]+" cm";
                                        document.getElementById('Sample5').style.visibility="visible";
-                                       document.getElementById('nextButton').style.visibility="visible";
+                                        setTimeout(function()
+                                       {
+                                         validateAnswer(2,3, "530px", "90px");
+                                       },2000);
                                        },2000);
                                       }
                                      },2000);
@@ -1642,7 +1540,7 @@
              }
 
 
-function graph() {
+            function graph() {
                 document.getElementById('chartContainer').style.visibility = "visible";
                 document.getElementById('download-graph').style.visibility = "visible";
 
@@ -1744,16 +1642,16 @@ function graph() {
                 document.getElementById('download-graph').onclick = function download() {
                     var chart = $("#chartContainer").ejChart("export");
                     if(window.navigator.msSaveOrOpenBlob)
-                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph.jpg");
+                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph for 300 rpm.jpg");
                     else{
                       var chartData = chart.toDataURL();
-                      this.download = "Graph.jpg";
+                      this.download = "Graph for 300 rpm.jpg";
                       this.href = chartData;
                     }
                 }
             }
 
-function graph1() {
+           function graph1() {
                 document.getElementById('chartContainer1').style.visibility = "visible";
                 document.getElementById('download-graph1').style.visibility = "visible";
 
@@ -1806,10 +1704,6 @@ function graph1() {
                                 {x: 0.118,y: 0.522},
                                 {x: 0.166,y: 0.835},
                                 {x: 0.257,y: 1.252},
-                                // {x: 0.305,y: 1.565},
-                                // {x: 0.392,y: 2.608},
-
-                               
                             ],
                             name: 'Total Pressure v/s Volume Flow',
                             type: 'line',
@@ -1828,9 +1722,7 @@ function graph1() {
                                 },
                                 visible: true
                             },
-
                         },
-
                     ],
                     commonSeriesOptions: {
                         enableAnimation: true,
@@ -1848,7 +1740,6 @@ function graph1() {
                     },
                      enableCanvasRendering: true,
                     exportSettings: { type: "jpg", mode: "client"}
-                  
                 });
                 
                 setTimeout(function() {
@@ -1859,10 +1750,10 @@ function graph1() {
                 document.getElementById('download-graph1').onclick = function download() {
                     var chart = $("#chartContainer1").ejChart("export");
                     if(window.navigator.msSaveOrOpenBlob)
-                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph.jpg");
+                      window.navigator.msSaveOrOpenBlob(chart.msToBlob(), "Graph for 400 rpm.jpg");
                     else{
                       var chartData = chart.toDataURL();
-                      this.download = "Graph.jpg";
+                      this.download = "Graph for 400 rpm.jpg";
                       this.href = chartData;
                     }
                 }
