@@ -456,7 +456,6 @@
            {
            document.getElementById('Sample41').style.visibility="visible";
            }         
-
          setTimeout(function()
          {
            document.getElementById('Sample41').style.visibility="hidden";
@@ -475,7 +474,6 @@
              document.getElementById('b1-21').style.visibility="visible";
              document.getElementById('b1-2').style.visibility="visible";
              document.getElementById('n-4').style.visibility="hidden";
-
              myInt = setInterval(function(){ animatearrow(); }, 500);
              animateArrowATPosition(150,200,20,180);
              document.getElementById('b1-21').onclick=function() { step33(); };
@@ -538,7 +536,7 @@
       { 
         primaryXAxis:
         {
-          title: { text: 'Volume Flow in m3/s' ,
+          title: { text: 'Volume Flow in m\u00B3/s' ,
               font : { fontWeight : "Bold" ,
                   fontFamily: "Verdana",
                   size: '14px' }},
@@ -1547,7 +1545,7 @@
                 $("#chartContainer").ejChart({
                     primaryXAxis: {
                         title: {
-                            text: 'Volume Flow in m3/s',
+                            text: 'Volume Flow in m\u00B3/s',
                             font: {
                                 fontWeight: "Bold",
                                 fontFamily: "Verdana",
@@ -1654,11 +1652,11 @@
            function graph1() {
                 document.getElementById('chartContainer1').style.visibility = "visible";
                 document.getElementById('download-graph1').style.visibility = "visible";
-
+                var str=new String("$1<sup>3</sup>");
                 $("#chartContainer1").ejChart({
                     primaryXAxis: {
                         title: {
-                            text: 'Volume Flow in m3/s',
+                            text: 'Volume Flow in m\u00B3/s',
                             font: {
                                 fontWeight: "Bold",
                                 fontFamily: "Verdana",
