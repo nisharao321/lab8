@@ -51,7 +51,7 @@ In all types of fan,the operating point should be fixed to the right of the aero
 </center><br>
 
 <center>
-  <img src="images/graph2.png" height="253" width="300">
+  <img src="images/graph2.jpg" height="253" width="300">
 </center>
 <center>curve representing operating point.</center><br>
 <center>Source: (<a href="https://www.axair-fans.co.uk/all-technical-information/duty-point-operating-point/">:https://www.axair-fans.co.uk/all-technical-information/duty-point-operating-point/)
@@ -67,7 +67,7 @@ In all types of fan,the operating point should be fixed to the right of the aero
 </center><br>
 
 <center>
-  <img src="images/graph3.png" height="253" width="300">
+  <img src="images/graph4.png" height="253" width="300">
 </center>
 <center>Characteristics curve of different fan.</center><br>
 <center>Source: (<a href="https://www.cibsejournal.com/cpd/modules/2011-12/">https://www.cibsejournal.com/cpd/modules/2011-12/)
