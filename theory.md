@@ -46,7 +46,7 @@ In all types of fan,the operating point should be fixed to the right of the aero
   <img src="images/graph1.png" height="253" width="300">
 </center>
 <center>Characteristics curve of a backward blade centrifugal fan.</center><br>
-<center>Source: (<a href=":https://www.engineeringtoolbox.com/fan-types-d_142.html">https://www.engineeringtoolbox.com/fan-types-d_142.html
+<center>Source: (<a href=":https://www.engineeringtoolbox.com/fan-types-d_142.html">:https://www.engineeringtoolbox.com/fan-types-d_142.html
 </a>)
 </center><br>
 
