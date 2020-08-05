@@ -2,7 +2,7 @@
 
 #### Pitot Static Tube
 
-<p style="text-indent:50px;text-align:justify;"> For every speed of a fan, a set of curve can be drawn to show variations of fan drift pressure, B. H. P. (Brake horse power) of the prime mover and mechanical efficiency of the fan, with the change in volume of air circulated by it. These curve are the indicative of the performance Or 'characteristics of the fan' and as such referred as fan characteristics curves of that particular fan. Sometimes the term "fan characteristics" is used to denote the pressure-volume curve.
+<p style="text-indent:50px;text-align:justify;"> For every speed of a fan, a set of curve can be drawn to show variations of fan drift pressure, B. H. P. (Brake horse power) of the prime mover and mechanical efficiency of the fan, with the change in volume of air circulated by it. These curves are the indicative of the performance Or 'characteristics of the fan' and as such referred as fan characteristics curves of that particular fan. Sometimes the term "fan characteristics" is used to denote the pressure-volume curve.
 </p>
 
 <p style="text-indent:50px;text-align:justify">Characteristics curve can be used:</p>
@@ -15,7 +15,7 @@
 <li>To know the performance of a combination of fans in series or in parallel, by compounding curves of the individual fans.</li>
 </ol>
 
-<p style="text-indent:50px;text-align:justify">Characteristics curve of various type of fans:</p>
+<p style="text-indent:50px;text-align:justify">Characteristics curve for various type of fans:</p>
 
 <ol style="text-indent:50px;text-align:justify;list-style-position: inside;">
 <li><p style="text-indent:50px;text-align:justify">The pressure characteristics or the pressure volume curve of a backward bladed fan falls fairly steadily from a maximum pressure at low volume to zero at maximum pressure at low volume to zero at volume, while that of a forward bladed fan remains fairly constant for a wide range of volume but falls steeply as maximum volume is reached.
@@ -45,7 +45,7 @@ In all types of fan,the operating point should be fixed to the right of the aero
 <center>
   <img src="images/graph1.png" height="253" width="300">
 </center>
-<center>curve representing operating point.</center><br>
+<center>Characteristics curve of a backward blade centrifugal fan.</center><br>
 <center>Source: (<a href="https://www.engineeringtoolbox.com/fan-types-d_142.html">https://www.engineeringtoolbox.com/fan-types-d_142.html
 </a>)
 </center><br><br>
@@ -53,7 +53,7 @@ In all types of fan,the operating point should be fixed to the right of the aero
 <center>
   <img src="images/graph2.jpg" height="253" width="300">
 </center>
-<center>curve representing operating point.</center><br>
+<center>Curve representing operating point.</center><br>
 <center>Source: (<a href="https://www.axair-fans.co.uk/all-technical-information/duty-point-operating-point/">https://www.axair-fans.co.uk/all-technical-information/duty-point-operating-point/
 </a>)
 </center><br><br>
