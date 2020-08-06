@@ -6,14 +6,8 @@
 <title>SOLVE</title>
   <link rel="stylesheet" href="css/Lab8.css" />
   <script type="text/javascript" src= "js/jquerymin.js"></script>
- <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
- <script type="text/javascript" src= "js/jquery-2.1.4.js"></script>
-<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
- --> <script type="text/javascript" src= "js/ej.web.all.min.js"></script>
-   <script type="text/javascript" src= "js/Lab8.js"></script>
-
-<!--   <script type="text/javascript" src="js/canvasjs.min.js"></script>
- -->
+  <script type="text/javascript" src= "js/ej.web.all.min.js"></script>
+  <script type="text/javascript" src= "js/Lab8.js"></script>
   <script>
     var simsubscreennum=0;
     var temp=0;
@@ -29,53 +23,53 @@
   <!--Simulation Screen start		-->
   <div id="simscreen">
     <!--Title of Simulation		-->
-    <div id="title"><h3>BACKWARD BLADED CENTRIFUGAL FAN</h3></div>
+    <div id="title" ><h3>BACKWARD BLADED AXIAL FAN</h3></div>
     <!--SubScreen Home	-->
     <div class="simsubscreen" id="canvas0">
       <h4 class="incanvas" style="font-family:verdana; ">Objective</h4>
-      <p class="incanvas" style="font-family:verdana; font-size:15px;">To draw the characteristics curve of backward bladed centrifugal fan.</p></br>
+      <p class="incanvas" style="font-family:verdana; font-size:15px;">To draw the characteristics curve of backward bladed axial fan.</p></br>
       <h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
       <p class="incanvas" style="font-family:verdana; font-size:14px;">Pitot Tube, Inclined U-Tube Manometer, Flexible Rubber Tubes, Ventilation Duct,<br> Cardboards of different diameters, Centrifugal fan etc.</p>
       <span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; left:5px;top:140px;"><strong>Description</strong>
         <span  class="tooltiptext" style="text-align:justify;left:90px;top:6px;"><strong style="color:red;">Backward-Curved Blades:</strong> Curve against the direction of the fan wheel's rotation. Characteristics curve can be used to compare two or more fans, assess the efficiency of construction of a fan, choose the most efficient for given mine resistance and much more.</span></span>
         <img id="" style="position: absolute; left: 70px; top: 260px; width:auto;height:250px;" title="" src="Images/human.png"/>
-        <img id="" style="position: absolute; left: 210px; top: 75px; " title="Ventilation Duct"  src="Images/255.png"/>
+        <img id="" style="position: absolute; left: 190px; top: 125px; " title="Ventilation Duct"  src="Images/tunnel.png"/>
       </div>
       <!--Step1	-->
       <div class="simsubscreen" id="canvas1" style="visibility:hidden">
         <strong id="titlestep" class="incanvas">STEP </strong>
         <span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
         <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Start the motor to allow the fan to attain the constant 300 rpm.</p>
-        <img id="a1" style="position: absolute; left: -10px; top: 50px;z-index:1001;" height="226px;" width="170px;" title="Motor" src="Images/1.0.png"/>
+        <img id="a1" style="position: absolute; left: -10px; top: 50px;z-index:1001;"  title="Motor" src="Images/1.0.png"/>
         <div>
-
           <div id="m7" style="position: absolute;width: 123px;height: 1px;left: 97px;top: 120px;z-index: 1005;background-color: black;transform: rotate(-69deg);-ms-transform: rotate(-69deg);-webkit-transform: rotate(-69deg);opacity: 0;"></div>
           <div id="m8" style="position:absolute;width: 80px;height:1px;left: 121px;top: 167px;z-index:1005;background-color: black;transform: rotate(-57deg);-ms-transform: rotate(-57deg);-webkit-transform: rotate(-57deg);opacity:0;"></div>
-          <div id="m9" style="position: absolute;width: 95px;height: 1px;left: 595px;top: 104px;z-index: 1005;background-color: black;transform: rotate(-28deg);-ms-transform: rotate(-28deg);-webkit-transform: rotate(-28deg);opacity:0;"></div>
-          <div id="m10" style="position:absolute;width: 95px;height:1px;left: 590px;top: 213px;z-index:1005;background-color: black;transform: rotate(35deg);-ms-transform: rotate(35deg);-webkit-transform: rotate(35deg);opacity:0;"></div>
-          <img id='a2' src="Images/22.png" width='65px'  style="position:absolute;left:670px;top:80px;visibility:hidden;">
-          <img id="arrow2"style="position: relative;left:662px;transform:rotate(-45deg); top:425px;width:40px;visibility:hidden;"  src="Images/11.png"/>
-		      <p id='wind'  style="position:absolute;left:670px;top: 415px;  font-family:verdana; font-size:14px;visibility:hidden;">Wind Direction</p>
+          <div id="m9" style="position: absolute;width: 40px;height: 1px;left: 616px;top: 436px;z-index: 1005;background-color: black;transform: rotate(25deg);-ms-transform: rotate(25deg);-webkit-transform: rotate(25deg);opacity:0;"></div>
+          <div id="m10" style="position:absolute;width: 40px;height:1px;left: 620px;top: 504px;z-index:1005;background-color: black;transform: rotate(-26deg);-ms-transform: rotate(-26deg);-webkit-transform: rotate(-26deg);opacity:0;"></div>
 
-          <div id='m1' style="width:35px;height:12px;"></div>
+          <img id='a2' src="Images/22.png" width='65px'  style="position:absolute;left:670px;top:80px;visibility:hidden;">
+            <p id="arrow2"style="position:absolute;left:590px;top:80px;font-size:50px; visibility:hidden;">&#8592;</p>
+          <img id='m11' src="Images/circle.png" style="position:absolute;left:640px;top:443px;width:50px;visibility:hidden;">
+          <img id='m12' src="Images/wheel.png" width='45px'  style="position:absolute;left:642px;top:445px;visibility:hidden;transition: all 1s linear;">
+		      <p id='wind'  style="position:absolute;left:595px;top: 125px;  font-family:verdana; font-size:11px;visibility:hidden;">Wind Direction</p>
+         <!--  <div id='m1' style="width:35px;height:12px;"></div>
           <div id="m2" style="width:39px;height:16px;"></div>
           <div id="m3" style="width:41px;height:20px;"></div>
           <div id="m4" style="width:42px;height:16px;"></div>
           <div id="m5" style="width:41px;height:15px;"></div>
-          <div id="m6" style="width:42px;height:10px;"></div>
+          <div id="m6" style="width:42px;height:10px;"></div> -->
         </div>
-
 		    <img id="a02" style="position: absolute; left: 12px; top: 61px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;"height="9px" width="auto"src="Images/button1.png"/>
 		    <img id="a03" style="position: absolute; left: 14px; top: 63px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;visibility:hidden;"height="5px" width="auto"src="Images/button1.png"/>
         <img id="a3" style="position: absolute; left: 15px; top: 61px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;"height="10px" width="auto"src="Images/1.1.svg"/>
 
         <img id="a5" style="position: absolute; left: 180px; top:60px;width:150px;visibility: hidden;z-index: 1002;" src="Images/speed.png"/>
         <img id="a6" style="position: absolute; left: 250px; top:93px;width:3px;height:40px;transform-origin: 70% 94%;transform:rotate(-70deg);visibility:hidden;z-index:1002;" src="Images/ndswh.png"/>
-        <img id="a66" style="position: absolute; left: 170px; top: 70px; z-index:1002;" title="Ventilation Duct"  src="Images/255.png"/>
+        <img id="a66" style="position: absolute; left: 160px; top: 135px; z-index:1002;width:480px;" title="Ventilation Duct"  src="Images/tunnel.png"/>
         <img id="a4" style="position: absolute; left: 133px; top:234px;width:13px;height:13px;z-index:1002;cursor:pointer;" src="Images/button.png"/>
 		    <img id="a44" style="position: absolute; left: 133px; top:234px;width:13px;height:13px;z-index:1002;cursor:pointer;visibility:hidden;" src="Images/button_1.png"/>
         <img id="a0" style="position: absolute; left: 117px; top:212px;width:13px;height:13px;z-index:1002;cursor:pointer;" src="Images/b.png"/>
-        <img id="a01" style="position: absolute; left: 112px; top:208px;visibility: hidden;width:24px;transition: all 1s linear;" src="Images/rr.png"/>
+        <img id="a01" style="position: absolute; left: 112px; top:208px;transition: all 1s linear;visibility: hidden;width:24px;" src="Images/rr.png"/>
 		    <p id="Sample0" style="position:absolute;left:-30px;top:280px;font-family:verdana;font-size:14px;padding:5px;background-color:black;color:white;visibility:hidden;border-radius:5px;text-align:justify;">The knob is being rotated</p>
       </div>
 
@@ -114,12 +108,11 @@
         <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Connect flexible rubber tube of manometer to Pitot Tube fixed at point 1 of ventilation duct.</p>
         <img id="a1-1" style="position: absolute; left: 170px; top: 40px; width:140px;visibility:hidden;"  src="Images/pipee.png"/>
         <img id="aa" style="position: absolute; left: 170px; top: 183px; width:85px;visibility: hidden;"  src="Images/"/>
-
         <img id="a1-11" style="position: absolute; left: 355.5px; top: 68px; width:120px;visibility:hidden;" title="Inclined U-tube Manometer" src="Images/table.png"/>
         <img id="a2-1" style="position: absolute; left: 169px; top: 328px; width:300px;height:7px;visibility:hidden;"  src="Images/samp.png"/>
         <img id="a2-11" style="position: absolute; left: 170px; top: 367px; width:300px;height:7px;visibility:hidden;"  src="Images/samp.png"/>
-        <img id="a2-2" style="position: absolute; left: 375px; top: 328px; width:100px;height:7px;transition-duration: 5s;"  src="Images/white.png"/>
-        <img id="a2-22" style="position: absolute; left: 375px; top: 367px; width:100px;height:7px;transition-duration: 5s;"  src="Images/white.png"/>
+        <img id="a2-2" style="position: absolute; left: 375px; top: 328px; width:220px;height:7px;transition-duration: 5s;"  src="Images/white.png"/>
+        <img id="a2-22" style="position: absolute; left: 375px; top: 367px; width:220px;height:7px;transition-duration: 5s;"  src="Images/white.png"/>
         <img id="a22-2" style="position: absolute; left: 375px; top: 328px; width:220px;height:7px;visibility:hidden;transition-duration: 5s;"  src="Images/white.png"/>
         <img id="a22-22" style="position: absolute; left: 375px; top: 367px; width:220px;height:7px;visibility:hidden;transition-duration: 5s;"  src="Images/white.png"/>
         <img id="a33-2" style="position: absolute; left: 375px; top: 328px; width:220px;height:7px;visibility:hidden;transition-duration: 5s;"  src="Images/white.png"/>
@@ -180,7 +173,6 @@
             <input id="ok" type="button" name="ok" value="OK" />&nbsp;&nbsp;&nbsp;</span>
           </span>
            <p id="Sample5" style="position:absolute;left:-40px;top:50px;font-family:verdana;font-size:14px;padding:5px;background-color:black;color:white;border-radius:5px;width:220px;text-align:justify;visibility:hidden;">Now, repeat the same procedure for 8 different cardboards and note down the readings of Static, Total and Velocity Head at point 1.</p>
-
         </div>
 
         <div class="simsubscreenn" id="canvas4"  style="visibility:hidden;">
@@ -219,19 +211,15 @@
           </table>
         </br>
 
-     
-
         <div class="input" >
           <label>Static Head pressure at point 1 (P<sub>s1</sub>)=</label>
           <input id="output" type="number" autocomplete="off" style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;" required >
           <span class="tooltip1" style="position:absolute;left:100%;top:-150%;">P<sub>s1</sub>=&#961;gL<sub>s1</sub>sin&theta;</span>
           <label  style="position:absolute;left:122%;top:4px;">Pa</label>
-
         <button id="button" style="position:absolute;left:135%;top:1%;">Check</button>
         <p id="right" style="position:absolute; left:128%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;" >&#10004;</p>
         <p id="wrong" style="position:absolute; left:128%; top:-143%; color:red;  visibility:hidden; font-size:22px;" >&#10008;</p>
-		<p id='h1'  style="position:absolute;left:138%;top:-60%; color:red; font-family:verdana; font-size:13px;visibility:hidden;"></p>
-
+		    <p id='h1'  style="position:absolute;left:138%;top:-60%; color:red; font-family:verdana; font-size:13px;visibility:hidden;"></p>
 		 </div>
         </br></br>
 
@@ -244,7 +232,6 @@
       <p id="right1" style="position:absolute; left:129%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;" >&#10004;</p>
       <p id="wrong1" style="position:absolute; left:129%; top:-143%; color:red;  visibility:hidden; font-size:22px;" >&#10008;</p>
 	  <p id='h2'  style="position:absolute;left:139%;top:-45%; color:red; font-family:verdana; font-size:13px;visibility:hidden;"></p>
-
 	   </div>
     </br></br>
 
@@ -307,7 +294,6 @@
 <span class="circlebg">&nbsp;4&nbsp;</span>
 <p class="steptext">&nbsp;Plot graph of Axial Load Vs Penetration.</p>
 <div>
-       
         <p id="g" style="position:absolute;background-color: #EEEEEE; left:150px; top:25px;cursor:pointer;border: 2px solid;padding: 5px;border-radius: 5px" onclick = "graph();">Total Pressure v/s Volume Flow graph for 300 rpm</p>
         <div id="chartContainer" style="position:absolute;height: 440px; width: 600px; top:50px;margin-left:50px; margin-right:100px; margin-top:30px;border:2px solid;visibility:hidden"></div>
       </div>
@@ -329,29 +315,29 @@
           <div id="n9" style="position: absolute;width: 95px;height: 1px;left: 595px;top: 104px;z-index: 1005;background-color: black;transform: rotate(-28deg);-ms-transform: rotate(-28deg);-webkit-transform: rotate(-28deg);opacity:0;"></div>
           <div id="n10" style="position:absolute;width: 95px;height:1px;left: 590px;top: 213px;z-index:1005;background-color: black;transform: rotate(35deg);-ms-transform: rotate(35deg);-webkit-transform: rotate(35deg);opacity:0;"></div>
           <img id='b2' src="Images/22.png" width='65px'  style="position:absolute;left:670px;top:80px;visibility:hidden;">
-          <img id="arrow2"style="position: relative;left:662px;transform:rotate(-45deg); top:425px;width:40px;visibility:hidden;"  src="Images/11.png"/>
-		      <p id='wind'  style="position:absolute;left:670px;top: 415px;  font-family:verdana; font-size:14px;visibility:hidden;">Wind Direction</p>
-         
-          <div id='n1' style="width:35px;height:12px;"></div>
+          <!-- <p id="arrow2"style="position:absolute;left:662px;top:425px;font-size:100px; visibility:hidden;">&#8592;</p>
+		      <p id='wind'  style="position:absolute;left:670px;top: 415px;  font-family:verdana; font-size:14px;visibility:hidden;">Wind Direction</p> -->
+          <img id='n11' src="Images/circle.png" style="position:absolute;left:640px;top:443px;width:50px;visibility:hidden;">
+          <img id='n12' src="Images/wheel.png" width='45px'  style="position:absolute;left:642px;top:445px;visibility:hidden;transition: all 1s linear;">
+         <!--  <div id='n1' style="width:35px;height:12px;"></div>
           <div id="n2" style="width:39px;height:16px;"></div>
           <div id="n3" style="width:41px;height:20px;"></div>
           <div id="n4" style="width:42px;height:16px;"></div>
           <div id="n5" style="width:41px;height:15px;"></div>
-          <div id="n6" style="width:42px;height:10px;"></div>
+          <div id="n6" style="width:42px;height:10px;"></div> -->
         </div>
 		    <img id="b02" style="position: absolute; left: 12px; top: 61px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;"height="9px" width="auto"src="Images/button1.png"/>
 		    <img id="b03" style="position: absolute; left: 14px; top: 63px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;visibility:hidden;"height="5px" width="auto"src="Images/button1.png"/>
         <img id="b3" style="position: absolute; left: 15px; top: 61px;transform-origin: 90% 30%;z-index:1002;cursor:pointer;"height="10px" width="auto"src="Images/1.1.svg"/>
         <img id="b5" style="position: absolute; left: 180px; top:60px;width:150px;visibility: hidden;z-index: 1002;" src="Images/speed.png"/>
         <img id="b6" style="position: absolute; left: 250px; top:93px;width:3px;height:40px;transform-origin: 70% 94%;transform:rotate(-70deg);visibility:hidden;z-index:1002;" src="Images/ndswh.png"/>
-        <img id="b66" style="position: absolute; left: 170px; top: 70px; z-index:1002;" title="Ventilation Duct"  src="Images/255.png"/>
+        <img id="b66" style="position: absolute; left: 160px; top: 135px; z-index:1002;width:480px;" title="Ventilation Duct"  src="Images/tunnel.png"/>
         <img id="b4" style="position: absolute; left: 133px; top:234px;width:13px;height:13px;z-index:1002;cursor:pointer;" src="Images/button.png"/>
 		    <img id="b44" style="position: absolute; left: 133px; top:234px;width:13px;height:13px;z-index:1002;cursor:pointer;visibility:hidden;" src="Images/button_1.png"/>
         <img id="b0" style="position: absolute; left: 117px; top:212px;width:13px;height:13px;z-index:1002;cursor:pointer;" src="Images/b.png"/>
         <img id="b01" style="position: absolute; left: 112px; top:208px;visibility: hidden;width:24px;transition: all 1s linear;" src="Images/rr.png"/>
 	    	<p id="Sample0" style="position:absolute;left:-30px;top:280px;font-family:verdana;font-size:14px;padding:5px;background-color:black;color:white;visibility:hidden;border-radius:5px;text-align:justify;">The knob is being rotated</p>
        </div>
-
 
        <div class="simsubscreen" id="canvas8" style="visibility:hidden">
         <strong id="titlestep" class="incanvas">STEP </strong>
@@ -484,8 +470,7 @@
   <input id="output1-11" type="number" autocomplete="off" style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;" required >
   <span class="tooltip1" style="position:absolute;left:100%;top:-150%;">P<sub>t1</sub>=&#961;gL<sub>t1</sub>sin&theta;</span>
   <label  style="position:absolute;left:122%;top:4px;">Pa</label>
-
-<button id="button1-11" style="position:absolute;left:136%;top:1%;visibility:hidden;" >Check</button>
+<button id="button1-11" style="position:absolute;left:136%;top:1%;visibility:hidden;">Check</button>
 <p id="right1-11" style="position:absolute; left:129%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;" >&#10004;</p>
 <p id="wrong1-11" style="position:absolute; left:129%; top:-143%; color:red;  visibility:hidden; font-size:22px;" >&#10008;</p>
 <p id='h2-21'  style="position:absolute;left:140%;top:-45%; color:red; font-family:verdana; font-size:13px;visibility:hidden;"></p>
@@ -497,8 +482,7 @@
   <input id="output2-11" type="number" autocomplete="off" style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;" required >
   <span class="tooltip1" style="position:absolute;left:100%;top:-150%;">P<sub>v1</sub>=&#961;gL<sub>v1</sub>sin&theta;</span>
   <label  style="position:absolute;left:120%;top:4px;">Pa</label>
-
-<button id="button2-11" style="position:absolute;left:133%;top:1%;visibility:hidden;" >Check</button>
+<button id="button2-11" style="position:absolute;left:133%;top:1%;visibility:hidden;">Check</button>
 <p id="right2-11" style="position:absolute; left:126%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;" >&#10004;</p>
 <p id="wrong2-11" style="position:absolute; left:126%; top:-143%; color:red;  visibility:hidden; font-size:22px;" >&#10008;</p>
 <p id='h3-2'  style="position:absolute;left:135%;top:-40%; color:red; font-family:verdana; font-size:13px;visibility:hidden;"></p>
@@ -559,15 +543,17 @@
 </div>
 
 <div class="simsubscreen" id="canvas12"  style="visibility:hidden;">
-  
   <strong class="incanvas" id="ob"><h3>
   Result: </h3></strong>
-  <label id="k1" style="font-size:14px;font-family:verdana;" >The characteristics curve of backward bladed centrifugal fan are drawn at different speeds.</label></br></br>
-  <span class="tableShow" style="position:absolute;left:15px;top:100px;color:red">Refer Graph
+  <label id="k1" style="font-size:14px;font-family:verdana;" >The characteristics curve of backward bladed axial fan are drawn at different speeds.</label></br></br>
+  <span class="tableShow" style="position:absolute;top:100px;color:red">Refer Graph
     <span class="tableShowResult" style="border:2px solid black;">
     <div id="cbcalculation" style="height: 400px; width: 550px; border:2px solid;"></div>
     </span>
   </span>
+</br>
+  <h3>Conclusion:</h3>
+  <p style="font-family: verdana; text-align: justify;">As seen from the graph drawn at 300 and 400 rpm. By increasing the RPM of the fan, Total pressure in the ventilation duct increases for every quantity of air flow. So, graph shifts upward for higher RPM value.
   </div>
 
 <div id="questDiv" style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
